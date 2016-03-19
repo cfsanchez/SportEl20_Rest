@@ -1,1 +1,1 @@
-﻿<%@ ServiceHost Language="C#" Debug="true" Service="RestSportEl20.UsuarioService" CodeBehind="UsuariosService.svc.cs" %>
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="RestSportEl20.UsuariosService" CodeBehind="UsuariosService.svc.cs" %>

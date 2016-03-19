@@ -9,7 +9,7 @@ using System.ServiceModel.Web;
 
 namespace RestSportEl20
 {
-    // NOTA: puede usar el comando "Rename" del menú "Refactorizar" para cambiar el nombre de interfaz "IDenunciaService" en el código y en el archivo de configuración a la vez.
+    // NOTA: puede usar el comando "Rename" del menú "Refactorizar" para cambiar el nombre de interfaz "IDenunciasService" en el código y en el archivo de configuración a la vez.
     [ServiceContract]
     public interface IDenunciasService
     {

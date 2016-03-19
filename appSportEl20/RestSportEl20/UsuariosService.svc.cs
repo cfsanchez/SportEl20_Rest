@@ -9,9 +9,9 @@ using System.Text;
 
 namespace RestSportEl20
 {
-    // NOTA: puede usar el comando "Rename" del menú "Refactorizar" para cambiar el nombre de clase "UsuarioService" en el código, en svc y en el archivo de configuración a la vez.
-    // NOTA: para iniciar el Cliente de prueba WCF para probar este servicio, seleccione UsuarioService.svc o UsuarioService.svc.cs en el Explorador de soluciones e inicie la depuración.
-    public class UsuarioService : IUsuariosService
+    // NOTA: puede usar el comando "Rename" del menú "Refactorizar" para cambiar el nombre de clase "UsuariosService" en el código, en svc y en el archivo de configuración a la vez.
+    // NOTA: para iniciar el Cliente de prueba WCF para probar este servicio, seleccione UsuariosService.svc o UsuariosService.svc.cs en el Explorador de soluciones e inicie la depuración.
+    public class UsuariosService : IUsuariosService
     {
         private UsuarioBL oBL = new UsuarioBL();
         public USUARIO CrearUsuario(USUARIO usuario)
@@ -28,6 +28,5 @@ namespace RestSportEl20
         {
             return oBL.ObtenerUSUARIO(usuario.EMAIL);
         }
-
     }
 }

@@ -14,6 +14,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportEl20.Util", "SportEl20.Util\SportEl20.Util.csproj", "{62B6F6F6-B0B7-4DDB-8AF8-6A02C2A8586D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestSportEI20", "UnitTestSportEI20\UnitTestSportEI20.csproj", "{EAF6E038-99A3-49D0-9EC2-079E809435FF}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2A12D5F5-32EC-43F4-9D01-71EFA6BB4791} = {2A12D5F5-32EC-43F4-9D01-71EFA6BB4791}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

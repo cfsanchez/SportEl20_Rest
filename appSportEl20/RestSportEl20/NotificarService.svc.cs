@@ -14,7 +14,6 @@ namespace RestSportEl20
     // NOTA: para iniciar el Cliente de prueba WCF para probar este servicio, seleccione NotificarService.svc o NotificarService.svc.cs en el Explorador de soluciones e inicie la depuración.
     public class NotificarService : INotificarService
     {
-
         public bool EnvioarEmail(Email email)
         {
             Comun onj = new Comun();

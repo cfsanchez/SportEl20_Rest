@@ -9,7 +9,7 @@ using System.Text;
 
 namespace RestSportEl20
 {
-    // NOTA: puede usar el comando "Rename" del menú "Refactorizar" para cambiar el nombre de interfaz "IModuloDemandaService" en el código y en el archivo de configuración a la vez.
+    // NOTA: puede usar el comando "Rename" del menú "Refactorizar" para cambiar el nombre de interfaz "IModuloDenunciaService" en el código y en el archivo de configuración a la vez.
     [ServiceContract]
     public interface IModuloDenunciaService
     {

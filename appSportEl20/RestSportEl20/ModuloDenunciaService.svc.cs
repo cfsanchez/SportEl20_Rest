@@ -9,8 +9,8 @@ using System.Text;
 
 namespace RestSportEl20
 {
-    // NOTA: puede usar el comando "Rename" del menú "Refactorizar" para cambiar el nombre de clase "ModuloDemandaService" en el código, en svc y en el archivo de configuración a la vez.
-    // NOTA: para iniciar el Cliente de prueba WCF para probar este servicio, seleccione ModuloDemandaService.svc o ModuloDemandaService.svc.cs en el Explorador de soluciones e inicie la depuración.
+    // NOTA: puede usar el comando "Rename" del menú "Refactorizar" para cambiar el nombre de clase "ModuloDenunciaService" en el código, en svc y en el archivo de configuración a la vez.
+    // NOTA: para iniciar el Cliente de prueba WCF para probar este servicio, seleccione ModuloDenunciaService.svc o ModuloDenunciaService.svc.cs en el Explorador de soluciones e inicie la depuración.
     public class ModuloDenunciaService : IModuloDenunciaService
     {
         private DenunciaBL oBL = new DenunciaBL();
@@ -24,6 +24,5 @@ namespace RestSportEl20
         {
             return oBL.ObtenerDENUNCIA(ID_USUARIO);
         }
-
     }
 }

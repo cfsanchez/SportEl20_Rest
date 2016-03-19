@@ -5,3 +5,10 @@ C:\Proy\EPE\appSportEl20\SportEl20.Util\bin\Debug\SportEl20.BE.pdb
 C:\Proy\EPE\appSportEl20\SportEl20.Util\obj\Debug\SportEl20.Util.csprojResolveAssemblyReference.cache
 C:\Proy\EPE\appSportEl20\SportEl20.Util\obj\Debug\SportEl20.Util.dll
 C:\Proy\EPE\appSportEl20\SportEl20.Util\obj\Debug\SportEl20.Util.pdb
+C:\Proy\DSD\appSportEl20\SportEl20.Util\bin\Debug\SportEl20.Util.dll
+C:\Proy\DSD\appSportEl20\SportEl20.Util\bin\Debug\SportEl20.Util.pdb
+C:\Proy\DSD\appSportEl20\SportEl20.Util\bin\Debug\SportEl20.BE.dll
+C:\Proy\DSD\appSportEl20\SportEl20.Util\bin\Debug\SportEl20.BE.pdb
+C:\Proy\DSD\appSportEl20\SportEl20.Util\obj\Debug\SportEl20.Util.csprojResolveAssemblyReference.cache
+C:\Proy\DSD\appSportEl20\SportEl20.Util\obj\Debug\SportEl20.Util.dll
+C:\Proy\DSD\appSportEl20\SportEl20.Util\obj\Debug\SportEl20.Util.pdb
