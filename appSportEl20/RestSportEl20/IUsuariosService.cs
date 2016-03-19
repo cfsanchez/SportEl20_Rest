@@ -13,10 +13,12 @@ namespace RestSportEl20
     [ServiceContract]
     public interface IUsuariosService
     {
+        [FaultContract(typeof(ExceptionBase))]
         [OperationContract]
         [WebInvoke(Method = "POST", UriTemplate = "CrearUsuario", ResponseFormat = WebMessageFormat.Json)]
         USUARIO CrearUsuario(USUARIO usuario);
 
+        [FaultContract(typeof(ExceptionBase))]
         [OperationContract]
         [WebInvoke(Method = "POST", UriTemplate = "ModificarUsuario", ResponseFormat = WebMessageFormat.Json)]
         USUARIO ModificarUsuario(USUARIO usuario);

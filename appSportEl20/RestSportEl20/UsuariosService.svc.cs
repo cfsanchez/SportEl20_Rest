@@ -16,12 +16,39 @@ namespace RestSportEl20
         private UsuarioBL oBL = new UsuarioBL();
         public USUARIO CrearUsuario(USUARIO usuario)
         {
-            return oBL.CrearUSUARIO(usuario);
+            try
+            {
+                return oBL.CrearUSUARIO(usuario);
+            }
+            catch (FaultException ex)
+            {
+                var xe = (FaultException<ExceptionBase>)ex;
+                throw new FaultException<ExceptionBase>(
+                    new ExceptionBase()
+                    {
+                        Codigo = xe.Detail.Codigo,
+                        Descripcion = xe.Detail.Descripcion,
+                    }, new FaultReason(xe.Reason.ToString()));
+            }
         }
 
         public USUARIO ModificarUsuario(USUARIO usuario)
         {
-            return oBL.ModificarUSUARIO(usuario);
+            try
+            {
+                return oBL.ModificarUSUARIO(usuario);
+            }
+            catch (FaultException ex)
+            {
+                var xe = (FaultException<ExceptionBase>)ex;
+                throw new FaultException<ExceptionBase>(
+                    new ExceptionBase()
+                    {
+                        Codigo = xe.Detail.Codigo,
+                        Descripcion = xe.Detail.Descripcion,
+                    }, new FaultReason(xe.Reason.ToString()));
+            }
+
         }
 
         public USUARIO ObtenerUsuario(USUARIO usuario)

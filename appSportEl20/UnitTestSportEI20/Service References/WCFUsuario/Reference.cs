@@ -16,12 +16,14 @@ namespace UnitTestSportEI20.WCFUsuario {
     public interface IUsuariosService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUsuariosService/CrearUsuario", ReplyAction="http://tempuri.org/IUsuariosService/CrearUsuarioResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SportEl20.BE.ExceptionBase), Action="http://tempuri.org/IUsuariosService/CrearUsuarioExceptionBaseFault", Name="ExceptionBase", Namespace="http://schemas.datacontract.org/2004/07/SportEl20.BE")]
         SportEl20.BE.USUARIO CrearUsuario(SportEl20.BE.USUARIO usuario);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUsuariosService/CrearUsuario", ReplyAction="http://tempuri.org/IUsuariosService/CrearUsuarioResponse")]
         System.Threading.Tasks.Task<SportEl20.BE.USUARIO> CrearUsuarioAsync(SportEl20.BE.USUARIO usuario);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUsuariosService/ModificarUsuario", ReplyAction="http://tempuri.org/IUsuariosService/ModificarUsuarioResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SportEl20.BE.ExceptionBase), Action="http://tempuri.org/IUsuariosService/ModificarUsuarioExceptionBaseFault", Name="ExceptionBase", Namespace="http://schemas.datacontract.org/2004/07/SportEl20.BE")]
         SportEl20.BE.USUARIO ModificarUsuario(SportEl20.BE.USUARIO usuario);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUsuariosService/ModificarUsuario", ReplyAction="http://tempuri.org/IUsuariosService/ModificarUsuarioResponse")]

@@ -16,7 +16,16 @@ namespace SportEl20.BL
 
         public USUARIO CrearUSUARIO(USUARIO USUARIOACrear)
         {
-           
+            if (oDAO.Obtener(USUARIOACrear.EMAIL) != null)
+            {
+                throw new FaultException<ExceptionBase>(
+                    new ExceptionBase()
+                    {
+                        Codigo = "101",
+                        Descripcion = "El USUARIO ya existe",
+                    }, new FaultReason("Error al intentar creacion"));
+            }
+
             return oDAO.Crear(USUARIOACrear);
         }
 
@@ -27,7 +36,7 @@ namespace SportEl20.BL
 
         public USUARIO ModificarUSUARIO(USUARIO USUARIOAModificar)
         {
-            if (oDAO.Obtener(USUARIOAModificar.EMAIL) != null)
+            if (oDAO.Obtener(USUARIOAModificar.EMAIL) == null)
             {
                 throw new FaultException<ExceptionBase>(
                     new ExceptionBase()

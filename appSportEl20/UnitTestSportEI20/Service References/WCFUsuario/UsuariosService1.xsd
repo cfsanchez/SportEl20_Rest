@@ -13,4 +13,11 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="USUARIO" nillable="true" type="tns:USUARIO" />
+  <xs:complexType name="ExceptionBase">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ExceptionBase" nillable="true" type="tns:ExceptionBase" />
 </xs:schema>
