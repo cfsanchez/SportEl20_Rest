@@ -1,0 +1,5 @@
+C:\Proy\EPE\appSportEl20\SportEl20.BE\bin\Debug\SportEl20.BE.dll
+C:\Proy\EPE\appSportEl20\SportEl20.BE\bin\Debug\SportEl20.BE.pdb
+C:\Proy\EPE\appSportEl20\SportEl20.BE\obj\Debug\SportEl20.BE.dll
+C:\Proy\EPE\appSportEl20\SportEl20.BE\obj\Debug\SportEl20.BE.pdb
+C:\Proy\EPE\appSportEl20\SportEl20.BE\obj\Debug\SportEl20.BE.csprojResolveAssemblyReference.cache
