@@ -11,6 +11,9 @@ namespace UnitTestSportEI20
     [TestClass]
     public class UnitTest1
     {
+
+        #region Usuario
+
         [TestMethod]
         public void TestCrearUsuario()
         {
@@ -38,6 +41,9 @@ namespace UnitTestSportEI20
             Assert.AreEqual("Angulo", ORPT.APE_MAT);
         }
 
+        #endregion
+
+        #region Denucia
         [TestMethod]
         public void TestCrearDenuncia()
         {
@@ -61,6 +67,9 @@ namespace UnitTestSportEI20
             Assert.AreEqual("Urgente", ORPT.TIPODENUNCIA);
         }
 
+        #endregion
+
+        #region Utilitario
 
         [TestMethod]
         public void TestEnviarEmail()
@@ -79,7 +88,7 @@ namespace UnitTestSportEI20
             Assert.IsTrue(bool.Parse(rpt));
         }
 
-
+        #endregion
 
         string Rest(string obj, string metodo, string url)
         {
