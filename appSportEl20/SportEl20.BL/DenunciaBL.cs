@@ -33,7 +33,7 @@ namespace SportEl20.BL
             string hoy = DateTime.Now.Date.ToShortDateString();
             var nunDenunciaDia = denuciaAcumulada.Where(x => x.FECHADENUNCIA.ToShortDateString() == hoy).Count();
 
-            if (nunDenunciaDia > 2)
+            if (nunDenunciaDia >= 2)
             {
                 throw new WebFaultException<string>("Excedio el numero maximo de denuncia por dia", HttpStatusCode.InternalServerError);
             }

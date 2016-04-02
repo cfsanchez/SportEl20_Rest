@@ -5,14 +5,6 @@ C:\Proy\EPE\appSportEl20\UnitTestSportEI20\bin\Debug\SportEl20.BE.pdb
 C:\Proy\EPE\appSportEl20\UnitTestSportEI20\obj\Debug\UnitTestSportEI20.csprojResolveAssemblyReference.cache
 C:\Proy\EPE\appSportEl20\UnitTestSportEI20\obj\Debug\UnitTestSportEI20.dll
 C:\Proy\EPE\appSportEl20\UnitTestSportEI20\obj\Debug\UnitTestSportEI20.pdb
-C:\Proy\DSD\appSportEl20\UnitTestSportEI20\bin\Debug\UnitTestSportEI20.dll.config
-C:\Proy\DSD\appSportEl20\UnitTestSportEI20\bin\Debug\UnitTestSportEI20.dll
-C:\Proy\DSD\appSportEl20\UnitTestSportEI20\bin\Debug\UnitTestSportEI20.pdb
-C:\Proy\DSD\appSportEl20\UnitTestSportEI20\bin\Debug\SportEl20.BE.dll
-C:\Proy\DSD\appSportEl20\UnitTestSportEI20\bin\Debug\SportEl20.BE.pdb
-C:\Proy\DSD\appSportEl20\UnitTestSportEI20\obj\Debug\UnitTestSportEI20.csprojResolveAssemblyReference.cache
-C:\Proy\DSD\appSportEl20\UnitTestSportEI20\obj\Debug\UnitTestSportEI20.dll
-C:\Proy\DSD\appSportEl20\UnitTestSportEI20\obj\Debug\UnitTestSportEI20.pdb
 D:\Carlos\epe\DSD\appSportEl20\UnitTestSportEI20\bin\Debug\UnitTestSportEI20.dll.config
 D:\Carlos\epe\DSD\appSportEl20\UnitTestSportEI20\bin\Debug\UnitTestSportEI20.dll
 D:\Carlos\epe\DSD\appSportEl20\UnitTestSportEI20\bin\Debug\UnitTestSportEI20.pdb
@@ -21,3 +13,11 @@ D:\Carlos\epe\DSD\appSportEl20\UnitTestSportEI20\bin\Debug\SportEl20.BE.pdb
 D:\Carlos\epe\DSD\appSportEl20\UnitTestSportEI20\obj\Debug\UnitTestSportEI20.csprojResolveAssemblyReference.cache
 D:\Carlos\epe\DSD\appSportEl20\UnitTestSportEI20\obj\Debug\UnitTestSportEI20.dll
 D:\Carlos\epe\DSD\appSportEl20\UnitTestSportEI20\obj\Debug\UnitTestSportEI20.pdb
+C:\Proy\DSD\appSportEl20\UnitTestSportEI20\bin\Debug\UnitTestSportEI20.dll.config
+C:\Proy\DSD\appSportEl20\UnitTestSportEI20\bin\Debug\UnitTestSportEI20.dll
+C:\Proy\DSD\appSportEl20\UnitTestSportEI20\bin\Debug\UnitTestSportEI20.pdb
+C:\Proy\DSD\appSportEl20\UnitTestSportEI20\bin\Debug\SportEl20.BE.dll
+C:\Proy\DSD\appSportEl20\UnitTestSportEI20\bin\Debug\SportEl20.BE.pdb
+C:\Proy\DSD\appSportEl20\UnitTestSportEI20\obj\Debug\UnitTestSportEI20.csprojResolveAssemblyReference.cache
+C:\Proy\DSD\appSportEl20\UnitTestSportEI20\obj\Debug\UnitTestSportEI20.dll
+C:\Proy\DSD\appSportEl20\UnitTestSportEI20\obj\Debug\UnitTestSportEI20.pdb
