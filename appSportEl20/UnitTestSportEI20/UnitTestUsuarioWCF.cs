@@ -27,6 +27,7 @@ namespace UnitTestSportEI20
                 TIPOPROFESION = "Sistemas",
                 SEXO = "M",
                 PASSWORD = "789456",
+                COD_PERFIL = "USU",
             });
 
             Assert.IsTrue(objCreado.ID_USUARIO > 0);
@@ -48,6 +49,7 @@ namespace UnitTestSportEI20
                     TIPOPROFESION = "Sistemas",
                     SEXO = "M",
                     PASSWORD = "789456",
+                    COD_PERFIL = "USU",
                 });
 
                 Assert.IsTrue(objCreado.ID_USUARIO > 0);
@@ -85,6 +87,29 @@ namespace UnitTestSportEI20
                 Assert.AreEqual("Error al intentar modificar", error.Reason.ToString());
                 Assert.AreEqual(error.Detail.Codigo, "102");
                 Assert.AreEqual(error.Detail.Descripcion, "El USUARIO no se encuentra registrado");
+            }
+        }
+
+
+        [TestMethod]
+        public void TestLoginOk()
+        {
+            try
+            {
+                WCFSeguridad.ModuloSeguridadServiceClient wcf = new WCFSeguridad.ModuloSeguridadServiceClient();
+                USUARIO objCreado = wcf.LoginUsuario(new USUARIO
+                {
+                    EMAIL = "cfsanchez.a@gmail.com",
+                    PASSWORD = "789456",
+                });
+
+                Assert.AreEqual("Carlos", objCreado.NOMBRE);
+            }
+            catch (FaultException<ExceptionBase> error)
+            {
+                Assert.AreEqual("Error al intentar logearse", error.Reason.ToString());
+                Assert.AreEqual(error.Detail.Codigo, "102");
+                Assert.AreEqual(error.Detail.Descripcion, "El Usuario o Contraseña son incorrecto");
             }
         }
 

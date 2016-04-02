@@ -14,15 +14,23 @@ namespace RestSportEl20
     public interface IDenunciasService
     {
         [OperationContract]
-        [WebInvoke(Method = "POST", UriTemplate = "CrearDenuncia", ResponseFormat = WebMessageFormat.Json)]
-        DENUNCIA CrearDenuncia(DENUNCIA denuncia);
+        [WebInvoke(Method = "POST", UriTemplate = "Denuncias", ResponseFormat = WebMessageFormat.Json)]
+        DENUNCIA CrearDenuncia(DENUNCIA DenunciaCrear);
 
         [OperationContract]
-        [WebInvoke(Method = "POST", UriTemplate = "ObtenerDenuncia", ResponseFormat = WebMessageFormat.Json)]
-        DENUNCIA ObtenerDenuncia(int ID_DENUNCIA);
+        [WebInvoke(Method = "GET", UriTemplate = "Denuncias/{id}", ResponseFormat = WebMessageFormat.Json)]
+        DENUNCIA ObtenerDenuncia(string id);
 
         [OperationContract]
-        [WebInvoke(Method = "POST", UriTemplate = "ListarDenuncia", ResponseFormat = WebMessageFormat.Json)]
+        [WebInvoke(Method = "PUT", UriTemplate = "Denuncias", ResponseFormat = WebMessageFormat.Json)]
+        DENUNCIA ModificarDenuncia(DENUNCIA DenunciaModificar);
+
+        [OperationContract]
+        [WebInvoke(Method = "DELETE", UriTemplate = "Denuncias/{id}", ResponseFormat = WebMessageFormat.Json)]
+        void EliminarDenuncia(string id);
+
+        [OperationContract]
+        [WebInvoke(Method = "GET", UriTemplate = "Denuncias", ResponseFormat = WebMessageFormat.Json)]
         List<DENUNCIA> ListarDenuncia();
     }
 }

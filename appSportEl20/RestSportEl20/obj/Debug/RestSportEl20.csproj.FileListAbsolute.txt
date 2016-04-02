@@ -26,3 +26,17 @@ C:\Proy\DSD\appSportEl20\RestSportEl20\bin\SportEl20.ADO.pdb
 C:\Proy\DSD\appSportEl20\RestSportEl20\obj\Debug\RestSportEl20.csprojResolveAssemblyReference.cache
 C:\Proy\DSD\appSportEl20\RestSportEl20\obj\Debug\RestSportEl20.dll
 C:\Proy\DSD\appSportEl20\RestSportEl20\obj\Debug\RestSportEl20.pdb
+D:\Carlos\epe\DSD\appSportEl20\RestSportEl20\bin\RestSportEl20.dll.config
+D:\Carlos\epe\DSD\appSportEl20\RestSportEl20\bin\RestSportEl20.dll
+D:\Carlos\epe\DSD\appSportEl20\RestSportEl20\bin\RestSportEl20.pdb
+D:\Carlos\epe\DSD\appSportEl20\RestSportEl20\bin\SportEl20.BE.dll
+D:\Carlos\epe\DSD\appSportEl20\RestSportEl20\bin\SportEl20.BL.dll
+D:\Carlos\epe\DSD\appSportEl20\RestSportEl20\bin\SportEl20.Util.dll
+D:\Carlos\epe\DSD\appSportEl20\RestSportEl20\bin\SportEl20.ADO.dll
+D:\Carlos\epe\DSD\appSportEl20\RestSportEl20\bin\SportEl20.BE.pdb
+D:\Carlos\epe\DSD\appSportEl20\RestSportEl20\bin\SportEl20.BL.pdb
+D:\Carlos\epe\DSD\appSportEl20\RestSportEl20\bin\SportEl20.Util.pdb
+D:\Carlos\epe\DSD\appSportEl20\RestSportEl20\bin\SportEl20.ADO.pdb
+D:\Carlos\epe\DSD\appSportEl20\RestSportEl20\obj\Debug\RestSportEl20.csprojResolveAssemblyReference.cache
+D:\Carlos\epe\DSD\appSportEl20\RestSportEl20\obj\Debug\RestSportEl20.dll
+D:\Carlos\epe\DSD\appSportEl20\RestSportEl20\obj\Debug\RestSportEl20.pdb

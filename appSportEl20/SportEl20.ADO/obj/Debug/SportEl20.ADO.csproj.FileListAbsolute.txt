@@ -12,3 +12,10 @@ C:\Proy\DSD\appSportEl20\SportEl20.ADO\bin\Debug\SportEl20.BE.pdb
 C:\Proy\DSD\appSportEl20\SportEl20.ADO\obj\Debug\SportEl20.ADO.csprojResolveAssemblyReference.cache
 C:\Proy\DSD\appSportEl20\SportEl20.ADO\obj\Debug\SportEl20.ADO.dll
 C:\Proy\DSD\appSportEl20\SportEl20.ADO\obj\Debug\SportEl20.ADO.pdb
+D:\Carlos\epe\DSD\appSportEl20\SportEl20.ADO\bin\Debug\SportEl20.ADO.dll
+D:\Carlos\epe\DSD\appSportEl20\SportEl20.ADO\bin\Debug\SportEl20.ADO.pdb
+D:\Carlos\epe\DSD\appSportEl20\SportEl20.ADO\bin\Debug\SportEl20.BE.dll
+D:\Carlos\epe\DSD\appSportEl20\SportEl20.ADO\bin\Debug\SportEl20.BE.pdb
+D:\Carlos\epe\DSD\appSportEl20\SportEl20.ADO\obj\Debug\SportEl20.ADO.csprojResolveAssemblyReference.cache
+D:\Carlos\epe\DSD\appSportEl20\SportEl20.ADO\obj\Debug\SportEl20.ADO.dll
+D:\Carlos\epe\DSD\appSportEl20\SportEl20.ADO\obj\Debug\SportEl20.ADO.pdb

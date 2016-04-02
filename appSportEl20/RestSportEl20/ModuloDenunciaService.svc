@@ -1,1 +1,4 @@
-﻿<%@ ServiceHost Language="C#" Debug="true" Service="RestSportEl20.ModuloDenunciaService" CodeBehind="ModuloDenunciaService.svc.cs" Factory="System.ServiceModel.Activation.WebServiceHostFactory"%>
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="RestSportEl20.ModuloDenunciaService" 
+    CodeBehind="ModuloDenunciaService.svc.cs" 
+    Factory="System.ServiceModel.Activation.WebServiceHostFactory"
+    %>

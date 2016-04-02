@@ -15,16 +15,13 @@ namespace RestSportEl20
     {
         [FaultContract(typeof(ExceptionBase))]
         [OperationContract]
-        [WebInvoke(Method = "POST", UriTemplate = "CrearUsuario", ResponseFormat = WebMessageFormat.Json)]
         USUARIO CrearUsuario(USUARIO usuario);
 
         [FaultContract(typeof(ExceptionBase))]
         [OperationContract]
-        [WebInvoke(Method = "POST", UriTemplate = "ModificarUsuario", ResponseFormat = WebMessageFormat.Json)]
         USUARIO ModificarUsuario(USUARIO usuario);
 
         [OperationContract]
-        [WebInvoke(Method = "POST", UriTemplate = "ObtenerUsuario", ResponseFormat = WebMessageFormat.Json)]
         USUARIO ObtenerUsuario(USUARIO usuario);
     }
 }

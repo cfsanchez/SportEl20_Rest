@@ -17,17 +17,36 @@ namespace RestSportEl20
 
         public DENUNCIA CrearDenuncia(DENUNCIA denuncia)
         {
-            return oBL.CrearDENUNCIA(denuncia);
+            return oBL.CrearDenuncia(denuncia);
         }
 
-        public DENUNCIA ObtenerDenuncia(int ID_DENUNCIA)
+        public DENUNCIA ObtenerDenuncia(string id)
         {
-            return oBL.ObtenerDENUNCIA(ID_DENUNCIA);
+            int ID_DENUNCIA = 0;
+            int.TryParse(id, out ID_DENUNCIA);
+            return oBL.ObtenerDenuncia(ID_DENUNCIA);
+        }
+
+        public DENUNCIA ModificarDenuncia(DENUNCIA DenunciaModificar)
+        {
+            return oBL.ModificarDenuncia(DenunciaModificar);
+        }
+
+        public void EliminarDenuncia(string id)
+        {
+            int ID_DENUNCIA = 0;
+            int.TryParse(id, out ID_DENUNCIA);
+            oBL.EliminarDenuncia(ID_DENUNCIA);
         }
 
         public List<DENUNCIA> ListarDenuncia()
         {
-            return oBL.ListarDENUNCIA();
+            return oBL.ListarDenuncia();
+        }
+
+        public void CrearDetalleFoto(List<DETALLE_FOTO> DETALLE_FOTO)
+        {
+            oBL.CrearDetalleFoto(DETALLE_FOTO);
         }
     }
 }

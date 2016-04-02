@@ -20,3 +20,14 @@ C:\Proy\DSD\appSportEl20\SportEl20.BL\bin\Debug\SportEl20.Util.pdb
 C:\Proy\DSD\appSportEl20\SportEl20.BL\obj\Debug\SportEl20.BL.csprojResolveAssemblyReference.cache
 C:\Proy\DSD\appSportEl20\SportEl20.BL\obj\Debug\SportEl20.BL.dll
 C:\Proy\DSD\appSportEl20\SportEl20.BL\obj\Debug\SportEl20.BL.pdb
+D:\Carlos\epe\DSD\appSportEl20\SportEl20.BL\bin\Debug\SportEl20.BL.dll
+D:\Carlos\epe\DSD\appSportEl20\SportEl20.BL\bin\Debug\SportEl20.BL.pdb
+D:\Carlos\epe\DSD\appSportEl20\SportEl20.BL\bin\Debug\SportEl20.ADO.dll
+D:\Carlos\epe\DSD\appSportEl20\SportEl20.BL\bin\Debug\SportEl20.BE.dll
+D:\Carlos\epe\DSD\appSportEl20\SportEl20.BL\bin\Debug\SportEl20.Util.dll
+D:\Carlos\epe\DSD\appSportEl20\SportEl20.BL\bin\Debug\SportEl20.ADO.pdb
+D:\Carlos\epe\DSD\appSportEl20\SportEl20.BL\bin\Debug\SportEl20.BE.pdb
+D:\Carlos\epe\DSD\appSportEl20\SportEl20.BL\bin\Debug\SportEl20.Util.pdb
+D:\Carlos\epe\DSD\appSportEl20\SportEl20.BL\obj\Debug\SportEl20.BL.csprojResolveAssemblyReference.cache
+D:\Carlos\epe\DSD\appSportEl20\SportEl20.BL\obj\Debug\SportEl20.BL.dll
+D:\Carlos\epe\DSD\appSportEl20\SportEl20.BL\obj\Debug\SportEl20.BL.pdb

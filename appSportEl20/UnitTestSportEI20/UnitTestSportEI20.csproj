@@ -54,6 +54,13 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Denuncia.cs" />
+    <Compile Include="DETALLE_FOTO.cs" />
+    <Compile Include="Service References\WCFSeguridad\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Service References\WCFUsuario\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -61,6 +68,7 @@
     </Compile>
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnitTestDenunciaRest.cs" />
     <Compile Include="UnitTestUsuarioWCF.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -74,7 +82,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="Properties\DataSources\SportEl20.BE.DENUNCIA.datasource" />
     <None Include="Properties\DataSources\SportEl20.BE.USUARIO.datasource" />
+    <None Include="Service References\WCFSeguridad\ModuloSeguridadService.wsdl" />
+    <None Include="Service References\WCFSeguridad\ModuloSeguridadService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WCFSeguridad\ModuloSeguridadService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WCFSeguridad\ModuloSeguridadService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\WCFUsuario\UsuarioService.wsdl" />
     <None Include="Service References\WCFUsuario\UsuariosService.xsd">
       <SubType>Designer</SubType>
@@ -87,6 +106,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Service References\WCFSeguridad\" />
     <WCFMetadataStorage Include="Service References\WCFUsuario\" />
   </ItemGroup>
   <ItemGroup>
@@ -100,6 +120,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\WCFUsuario\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WCFSeguridad\ModuloSeguridadService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WCFSeguridad\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WCFSeguridad\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WCFSeguridad\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

@@ -13,6 +13,7 @@ namespace SportEl20.ADO
     {
         string CadenaConexion = ConfigurationManager.ConnectionStrings["DBSportEl20"].ConnectionString;
 
+
         public DENUNCIA Crear(DENUNCIA denuncia)
         {
             int ID_DENUNCIA = 0;
@@ -34,38 +35,11 @@ namespace SportEl20.ADO
             }
             DENUNCIACreado = Obtener(ID_DENUNCIA);
 
-            var detalle = denuncia.DETALLE_FOTOS;
-            CrearDetalle(detalle, ID_DENUNCIA);
+            //var detalle = denuncia.DETALLE_FOTOS;
+            //CrearDetalle(detalle, ID_DENUNCIA);
 
             return DENUNCIACreado;
         }
-
-        public void CrearDetalle(List<DETALLE_FOTO> DETALLE_FOTO, int ID_DENUNCIA)
-        {
-            if (DETALLE_FOTO == null)
-            {
-                return;
-            }
-
-            string sql = "INSERT INTO [DETALLE_FOTO] (ID_DENUNCIA,FOTODENUNCIA) VALUES (@ID_DENUNCIA,@FOTODENUNCIA)";
-            using (SqlConnection conexion = new SqlConnection(CadenaConexion))
-            {
-                conexion.Open();
-
-                foreach (var item in DETALLE_FOTO)
-                {
-                    using (SqlCommand comando = new SqlCommand(sql, conexion))
-                    {
-                        comando.Parameters.Add(new SqlParameter("@ID_DENUNCIA", ID_DENUNCIA));
-                        comando.Parameters.Add(new SqlParameter("@FOTODENUNCIA", item.FOTODENUNCIA));
-                        ID_DENUNCIA = (int)comando.ExecuteScalar();
-                    }
-                }
-
-            }
-
-        }
-
 
         public DENUNCIA Obtener(int ID_DENUNCIA)
         {
@@ -97,11 +71,47 @@ namespace SportEl20.ADO
             return DENUNCIAEncontrado;
         }
 
-        public List<DENUNCIA> ObtenerXUsuario(int ID_USUARIO)
+        public DENUNCIA Modificar(DENUNCIA denuncia)
+        {
+            DENUNCIA SEG_USUARIOModificado = null;
+            string sql = "UPDATE DENUNCIA SET ID_USUARIO=@ID_USUARIO, TIPODENUNCIA=@TIPODENUNCIA, FECHADENUNCIA=@FECHADENUNCIA, DESCRIPCION=@DESCRIPCION, ESTADO=@ESTADO WHERE ID_DENUNCIA=@ID_DENUNCIA";
+            using (SqlConnection conexion = new SqlConnection(CadenaConexion))
+            {
+                conexion.Open();
+                using (SqlCommand comando = new SqlCommand(sql, conexion))
+                {
+                    comando.Parameters.Add(new SqlParameter("@ID_USUARIO", denuncia.ID_USUARIO));
+                    comando.Parameters.Add(new SqlParameter("@TIPODENUNCIA", denuncia.TIPODENUNCIA));
+                    comando.Parameters.Add(new SqlParameter("@FECHADENUNCIA", denuncia.FECHADENUNCIA));
+                    comando.Parameters.Add(new SqlParameter("@DESCRIPCION", denuncia.DESCRIPCION));
+                    comando.Parameters.Add(new SqlParameter("@ESTADO", denuncia.ESTADO));
+                    comando.Parameters.Add(new SqlParameter("@ID_DENUNCIA", denuncia.ID_DENUNCIA));
+                    comando.ExecuteNonQuery();
+                }
+            }
+            SEG_USUARIOModificado = Obtener(denuncia.ID_DENUNCIA);
+            return SEG_USUARIOModificado;
+        }
+
+        public void Eliminar(int id)
+        {
+            string sql = "DELETE FROM DENUNCIA WHERE ID_DENUNCIA=@ID_DENUNCIA";
+            using (SqlConnection conexion = new SqlConnection(CadenaConexion))
+            {
+                conexion.Open();
+                using (SqlCommand comando = new SqlCommand(sql, conexion))
+                {
+                    comando.Parameters.Add(new SqlParameter("@ID_DENUNCIA", id));
+                    comando.ExecuteNonQuery();
+                }
+            }
+        }
+
+        public List<DENUNCIA> ListarTodos()
         {
             List<DENUNCIA> DENUNCIAesEncontrado = new List<DENUNCIA>();
             DENUNCIA DENUNCIAEncontrado = null;
-            string sql = "SELECT * FROM DENUNCIA WHERE ID_USUARIO=@ID_USUARIO";
+            string sql = "SELECT * FROM DENUNCIA";
             using (SqlConnection conexion = new SqlConnection(CadenaConexion))
             {
                 conexion.Open();
@@ -109,7 +119,7 @@ namespace SportEl20.ADO
                 {
                     using (SqlDataReader resultado = comando.ExecuteReader())
                     {
-                        if (resultado.Read())
+                        while (resultado.Read())
                         {
                             DENUNCIAEncontrado = new DENUNCIA()
                             {
@@ -129,19 +139,47 @@ namespace SportEl20.ADO
             return DENUNCIAesEncontrado;
         }
 
-        public List<DENUNCIA> Listar()
+
+
+        public void CrearDetalleFoto(List<DETALLE_FOTO> DETALLE_FOTO)
+        {
+            if (DETALLE_FOTO == null)
+            {
+                return;
+            }
+
+            string sql = "INSERT INTO [DETALLE_FOTO] (ID_DENUNCIA,FOTODENUNCIA) VALUES (@ID_DENUNCIA,@FOTODENUNCIA)";
+            using (SqlConnection conexion = new SqlConnection(CadenaConexion))
+            {
+                conexion.Open();
+
+                foreach (var item in DETALLE_FOTO)
+                {
+                    using (SqlCommand comando = new SqlCommand(sql, conexion))
+                    {
+                        comando.Parameters.Add(new SqlParameter("@ID_DENUNCIA", item.ID_DENUNCIA));
+                        comando.Parameters.Add(new SqlParameter("@FOTODENUNCIA", item.FOTODENUNCIA));
+                        comando.ExecuteNonQuery();
+                    }
+                }
+            }
+
+        }
+
+        public List<DENUNCIA> ObtenerXUsuario(int ID_USUARIO)
         {
             List<DENUNCIA> DENUNCIAesEncontrado = new List<DENUNCIA>();
             DENUNCIA DENUNCIAEncontrado = null;
-            string sql = "SELECT * FROM DENUNCIA";
+            string sql = "SELECT * FROM DENUNCIA WHERE ID_USUARIO=@ID_USUARIO";
             using (SqlConnection conexion = new SqlConnection(CadenaConexion))
             {
                 conexion.Open();
                 using (SqlCommand comando = new SqlCommand(sql, conexion))
                 {
+                    comando.Parameters.Add(new SqlParameter("@ID_USUARIO", ID_USUARIO));
                     using (SqlDataReader resultado = comando.ExecuteReader())
                     {
-                        if (resultado.Read())
+                        while (resultado.Read())
                         {
                             DENUNCIAEncontrado = new DENUNCIA()
                             {

@@ -15,14 +15,9 @@ namespace RestSportEl20
     {
         private DenunciaBL oBL = new DenunciaBL();
 
-        public DENUNCIA RegistrarDenuncia(DENUNCIA denuncia)
+        public List<DENUNCIA> ConsultarDenunciaUsuario(int ID_USUARIO)
         {
-            return oBL.RegistrarDenuncia(denuncia);
-        }
-
-        public DENUNCIA ConsultarDenunciaUsuario(int ID_USUARIO)
-        {
-            return oBL.ObtenerDENUNCIA(ID_USUARIO);
+            return oBL.ObtenerDenunciaPorUsuario(ID_USUARIO);
         }
     }
 }

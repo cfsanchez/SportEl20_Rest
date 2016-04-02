@@ -17,12 +17,38 @@ namespace RestSportEl20
 
         public USUARIO LoginUsuario(USUARIO usuario)
         {
-            return oBL.Login(usuario);
+            try
+            {
+                return oBL.Login(usuario);
+            }
+            catch (FaultException ex)
+            {
+                var xe = (FaultException<ExceptionBase>)ex;
+                throw new FaultException<ExceptionBase>(
+                    new ExceptionBase()
+                    {
+                        Codigo = xe.Detail.Codigo,
+                        Descripcion = xe.Detail.Descripcion,
+                    }, new FaultReason(xe.Reason.ToString()));
+            }
         }
 
         public USUARIO RecuperarContrasenia(string email)
         {
-            return oBL.RecuperarContrasenia(email);
+            try
+            {
+                return oBL.RecuperarContrasenia(email);
+            }
+            catch (FaultException ex)
+            {
+                var xe = (FaultException<ExceptionBase>)ex;
+                throw new FaultException<ExceptionBase>(
+                    new ExceptionBase()
+                    {
+                        Codigo = xe.Detail.Codigo,
+                        Descripcion = xe.Detail.Descripcion,
+                    }, new FaultReason(xe.Reason.ToString()));
+            }
         }
     }
 }

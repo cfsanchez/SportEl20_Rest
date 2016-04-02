@@ -55,7 +55,7 @@ namespace SportEl20.BL
             USUARIO obj = new USUARIO();
             obj = oDAO.Obtener(usuario.EMAIL);
 
-            if (obj.PASSWORD.Equals(usuario.PASSWORD))
+            if (obj == null || !obj.PASSWORD.Equals(usuario.PASSWORD))
             {
                 throw new FaultException<ExceptionBase>(
                     new ExceptionBase()

@@ -13,13 +13,10 @@ namespace RestSportEl20
     [ServiceContract]
     public interface IModuloDenunciaService
     {
-        [OperationContract]
-        [WebInvoke(Method = "POST", UriTemplate = "RegistrarDenuncia", ResponseFormat = WebMessageFormat.Json)]
-        DENUNCIA RegistrarDenuncia(DENUNCIA denuncia);
 
         [OperationContract]
         [WebInvoke(Method = "POST", UriTemplate = "ConsultarDenunciaUsuario", ResponseFormat = WebMessageFormat.Json)]
-        DENUNCIA ConsultarDenunciaUsuario(int ID_USUARIO);
+        List<DENUNCIA> ConsultarDenunciaUsuario(int ID_USUARIO);
 
     }
 }

@@ -16,7 +16,7 @@ namespace SportEl20.ADO
         public USUARIO Crear(USUARIO usuario)
         {
             USUARIO USUARIOCreado = null;
-            string sql = "INSERT INTO [SEG_USUARIO] (NOMBRE,APE_PAT,APE_MAT,TIPOPROFESION,SEXO,EMAIL,PASSWORD) VALUES (@NOMBRE,@APE_PAT,@APE_MAT,@TIPOPROFESION,@SEXO,@EMAIL,@PASSWORD)";
+            string sql = "INSERT INTO [SEG_USUARIO] (NOMBRE,APE_PAT,APE_MAT,TIPOPROFESION,SEXO,EMAIL,PASSWORD,COD_PERFIL) VALUES (@NOMBRE,@APE_PAT,@APE_MAT,@TIPOPROFESION,@SEXO,@EMAIL,@PASSWORD,@COD_PERFIL)";
             using (SqlConnection conexion = new SqlConnection(CadenaConexion))
             {
                 conexion.Open();
@@ -29,6 +29,7 @@ namespace SportEl20.ADO
                     comando.Parameters.Add(new SqlParameter("@SEXO", usuario.SEXO));
                     comando.Parameters.Add(new SqlParameter("@EMAIL", usuario.EMAIL));
                     comando.Parameters.Add(new SqlParameter("@PASSWORD", usuario.PASSWORD));
+                    comando.Parameters.Add(new SqlParameter("@COD_PERFIL", usuario.COD_PERFIL));
                     comando.ExecuteNonQuery();
                 }
             }
@@ -59,6 +60,7 @@ namespace SportEl20.ADO
                                 SEXO = (string)resultado["SEXO"],
                                 EMAIL = (string)resultado["EMAIL"],
                                 PASSWORD = (string)resultado["PASSWORD"],
+                                COD_PERFIL = (string)resultado["COD_PERFIL"],
                             };
                         }
                     }
@@ -66,6 +68,40 @@ namespace SportEl20.ADO
             }
             return USUARIOEncontrado;
         }
+
+        public USUARIO ObtenerPorId(int id)
+        {
+            USUARIO USUARIOEncontrado = null;
+            string sql = "SELECT * FROM SEG_USUARIO WHERE ID_USUARIO=@id";
+            using (SqlConnection conexion = new SqlConnection(CadenaConexion))
+            {
+                conexion.Open();
+                using (SqlCommand comando = new SqlCommand(sql, conexion))
+                {
+                    comando.Parameters.Add(new SqlParameter("@id", id));
+                    using (SqlDataReader resultado = comando.ExecuteReader())
+                    {
+                        if (resultado.Read())
+                        {
+                            USUARIOEncontrado = new USUARIO()
+                            {
+                                ID_USUARIO = (int)resultado["ID_USUARIO"],
+                                NOMBRE = (string)resultado["NOMBRE"],
+                                APE_PAT = (string)resultado["APE_PAT"],
+                                APE_MAT = (string)resultado["APE_MAT"],
+                                TIPOPROFESION = (string)resultado["TIPOPROFESION"],
+                                SEXO = (string)resultado["SEXO"],
+                                EMAIL = (string)resultado["EMAIL"],
+                                PASSWORD = (string)resultado["PASSWORD"],
+                                COD_PERFIL = (string)resultado["COD_PERFIL"],
+                            };
+                        }
+                    }
+                }
+            }
+            return USUARIOEncontrado;
+        }
+
         public USUARIO Modificar(USUARIO USUARIOAModificar)
         {
             USUARIO USUARIOModificado = null;

@@ -1,11 +1,11 @@
-﻿using SportEl20.BE;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
+using SportEl20.BE;
 
 namespace RestSportEl20
 {
@@ -13,12 +13,12 @@ namespace RestSportEl20
     [ServiceContract]
     public interface IModuloSeguridadService
     {
+        [FaultContract(typeof(ExceptionBase))]
         [OperationContract]
-        [WebInvoke(Method = "POST", UriTemplate = "LoginUsuario", ResponseFormat = WebMessageFormat.Json)]
         USUARIO LoginUsuario(USUARIO usuario);
 
+        [FaultContract(typeof(ExceptionBase))]
         [OperationContract]
-        [WebInvoke(Method = "POST", UriTemplate = "RecuperarContrasenia", ResponseFormat = WebMessageFormat.Json)]
         USUARIO RecuperarContrasenia(string email);
 
     }

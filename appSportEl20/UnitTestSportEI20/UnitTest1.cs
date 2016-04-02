@@ -47,7 +47,7 @@ namespace UnitTestSportEI20
         [TestMethod]
         public void TestCrearDenuncia()
         {
-            DENUNCIA oenvio = new DENUNCIA()
+            Denuncia oenvio = new Denuncia()
             {
                 ID_USUARIO = 2,
                 TIPODENUNCIA = "Urgente",
@@ -61,7 +61,7 @@ namespace UnitTestSportEI20
             string rpt = Rest(postdata, "POST", "DenunciasService.svc/CrearDenuncia");
 
             JavaScriptSerializer js = new JavaScriptSerializer();
-            DENUNCIA ORPT = js.Deserialize<DENUNCIA>(rpt);
+            Denuncia ORPT = js.Deserialize<Denuncia>(rpt);
 
             Assert.AreEqual(2, ORPT.ID_USUARIO);
             Assert.AreEqual("Urgente", ORPT.TIPODENUNCIA);
