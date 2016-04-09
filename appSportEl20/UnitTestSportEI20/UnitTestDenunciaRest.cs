@@ -19,28 +19,13 @@ namespace UnitTestSportEI20
         [TestMethod]
         public void CrearOk()
         {
-            DENUNCIA oItem2 = new DENUNCIA
-            {
-                ID_USUARIO = 2,
-                TIPODENUNCIA = "Parque", //Parque, Casa
-                FECHADENUNCIA = DateTime.Now,
-                DESCRIPCION = "Se encuentra 3 ladrones robando en la galeria.",
-                ESTADO = "PENDIENTE",
-            };
-            xwcfDenuncia.DenunciasServiceClient wcf = new xwcfDenuncia.DenunciasServiceClient();
-            var xx = wcf.CrearDenuncia(oItem2);
-
-            
-            
-
-
             Denuncia oItem = new Denuncia
             {
-                ID_USUARIO = 2,
-                TIPODENUNCIA = "Parque", //Parque, Casa
+                ID_USUARIO = 4,
+                TIPODENUNCIA = "Vandalismo", //Parque, Casa
                 FECHADENUNCIA = DateTime.Now,
                 DESCRIPCION = "Se encuentra 3 ladrones robando en la galeria.",
-                ESTADO = "PENDIENTE",
+                ESTADO = "REGISTRADO",
             };
 
 
@@ -51,8 +36,8 @@ namespace UnitTestSportEI20
             JavaScriptSerializer js = new JavaScriptSerializer();
             Denuncia oItemRespuesta = js.Deserialize<Denuncia>(rpt);
 
-            Assert.AreEqual("Parque", oItemRespuesta.TIPODENUNCIA);
-            Assert.AreEqual(2, oItemRespuesta.ID_USUARIO);
+            Assert.AreEqual("Vandalismo", oItemRespuesta.TIPODENUNCIA);
+            Assert.AreEqual(4, oItemRespuesta.ID_USUARIO);
         }
 
         [TestMethod]

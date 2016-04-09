@@ -23,7 +23,7 @@ namespace UnitTestSportEI20
                 NOMBRE = "Carlos",
                 APE_PAT = "Sanchez",
                 APE_MAT = "Angulo",
-                EMAIL = "cfsanchez.a@gmail.com",
+                EMAIL = "cfsanchez@gmail.com",
                 TIPOPROFESION = "Sistemas",
                 SEXO = "M",
                 PASSWORD = "789456",

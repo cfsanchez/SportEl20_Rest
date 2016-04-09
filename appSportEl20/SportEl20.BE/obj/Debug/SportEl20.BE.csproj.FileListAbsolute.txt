@@ -16,4 +16,3 @@ D:\Carlos\epe\DSD\appSportEl20\SportEl20.BE\bin\Debug\SportEl20.BE.pdb
 D:\Carlos\epe\DSD\appSportEl20\SportEl20.BE\obj\Debug\SportEl20.BE.dll
 D:\Carlos\epe\DSD\appSportEl20\SportEl20.BE\obj\Debug\SportEl20.BE.pdb
 D:\Carlos\epe\DSD\appSportEl20\SportEl20.BE\obj\Debug\SportEl20.BE.csprojResolveAssemblyReference.cache
-C:\Proy\DSD\appSportEl20\SportEl20.BE\obj\Debug\SportEl20.BE.csprojResolveAssemblyReference.cache
