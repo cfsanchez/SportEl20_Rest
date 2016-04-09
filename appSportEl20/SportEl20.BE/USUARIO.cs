@@ -28,5 +28,8 @@ namespace SportEl20.BE
         public string PASSWORD { get; set; }
         [DataMember]
         public string COD_PERFIL { get; set; }
+
+        [DataMember]
+        public string NombreFull{ get; set; }
     }
 }

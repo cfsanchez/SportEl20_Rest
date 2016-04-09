@@ -19,14 +19,30 @@ namespace UnitTestSportEI20
         [TestMethod]
         public void CrearOk()
         {
-            Denuncia oItem = new Denuncia
+            DENUNCIA oItem2 = new DENUNCIA
             {
-                ID_USUARIO = 4,
+                ID_USUARIO = 2,
                 TIPODENUNCIA = "Parque", //Parque, Casa
-                FECHADENUNCIA = DateTime.Today,
+                FECHADENUNCIA = DateTime.Now,
                 DESCRIPCION = "Se encuentra 3 ladrones robando en la galeria.",
                 ESTADO = "PENDIENTE",
             };
+            xwcfDenuncia.DenunciasServiceClient wcf = new xwcfDenuncia.DenunciasServiceClient();
+            var xx = wcf.CrearDenuncia(oItem2);
+
+            
+            
+
+
+            Denuncia oItem = new Denuncia
+            {
+                ID_USUARIO = 2,
+                TIPODENUNCIA = "Parque", //Parque, Casa
+                FECHADENUNCIA = DateTime.Now,
+                DESCRIPCION = "Se encuentra 3 ladrones robando en la galeria.",
+                ESTADO = "PENDIENTE",
+            };
+
 
             var postData = new JavaScriptSerializer().Serialize(oItem);
 
@@ -36,7 +52,7 @@ namespace UnitTestSportEI20
             Denuncia oItemRespuesta = js.Deserialize<Denuncia>(rpt);
 
             Assert.AreEqual("Parque", oItemRespuesta.TIPODENUNCIA);
-            Assert.AreEqual(1, oItemRespuesta.ID_USUARIO);
+            Assert.AreEqual(2, oItemRespuesta.ID_USUARIO);
         }
 
         [TestMethod]
@@ -44,9 +60,9 @@ namespace UnitTestSportEI20
         {
             Denuncia oItem = new Denuncia
             {
-                ID_USUARIO = 1,
+                ID_USUARIO = 2,
                 TIPODENUNCIA = "Parque", //Parque, Casa
-                FECHADENUNCIA = DateTime.Today,
+                FECHADENUNCIA = DateTime.Now,
                 DESCRIPCION = "Se encuentra 3 ladrones robando en la galeria.",
                 ESTADO = "PENDIENTE",
             };
@@ -60,7 +76,7 @@ namespace UnitTestSportEI20
                 Denuncia oItemRespuesta = js.Deserialize<Denuncia>(rpt);
 
                 Assert.AreEqual("Parque", oItemRespuesta.TIPODENUNCIA);
-                Assert.AreEqual(1, oItemRespuesta.ID_USUARIO);
+                Assert.AreEqual(2, oItemRespuesta.ID_USUARIO);
 
             }
             catch (WebException ex)
@@ -81,10 +97,10 @@ namespace UnitTestSportEI20
         {
             Denuncia oItem = new Denuncia
             {
-                ID_DENUNCIA = 9,
-                ID_USUARIO = 3,
+                ID_DENUNCIA = 2,
+                ID_USUARIO = 1,
                 TIPODENUNCIA = "Casa", //Parque, Casa
-                FECHADENUNCIA = DateTime.Today,
+                FECHADENUNCIA = DateTime.Now,
                 DESCRIPCION = "Se encuentra 3 ladrones robando en la galeria.",
                 ESTADO = "PROCESO",
             };
@@ -118,10 +134,10 @@ namespace UnitTestSportEI20
         {
             Denuncia oItem = new Denuncia
             {
-                ID_DENUNCIA = 9,
-                ID_USUARIO = 4,
+                ID_DENUNCIA = 2,
+                ID_USUARIO = 2,
                 TIPODENUNCIA = "Casa", //Parque, Casa
-                FECHADENUNCIA = DateTime.Today,
+                FECHADENUNCIA = DateTime.Now,
                 DESCRIPCION = "Se encuentra 3 ladrones robando en la galeria.",
                 ESTADO = "PROCESO",
             };
@@ -153,7 +169,7 @@ namespace UnitTestSportEI20
         [TestMethod]
         public void Eliminar()
         {
-            int id = 9;
+            int id = 2;
             string url = string.Format("DenunciasService.svc/Denuncias/{0}", id);
 
             RestUrl("DELETE", url);

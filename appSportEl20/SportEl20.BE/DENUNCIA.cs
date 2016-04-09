@@ -22,9 +22,11 @@ namespace SportEl20.BE
         [DataMember]
         public string DESCRIPCION { get; set; }
         [DataMember]
-        public string ESTADO { get; set; } 
+        public string ESTADO { get; set; }
 
         [DataMember]
-        public List<DETALLE_FOTO> DETALLE_FOTOS { get; set; } 
+        public USUARIO USUARIO { get; set; }
+        [DataMember]
+        public List<DETALLE_FOTO> DETALLE_FOTOS { get; set; }
     }
 }

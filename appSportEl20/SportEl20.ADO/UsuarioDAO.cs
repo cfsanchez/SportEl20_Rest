@@ -61,6 +61,7 @@ namespace SportEl20.ADO
                                 EMAIL = (string)resultado["EMAIL"],
                                 PASSWORD = (string)resultado["PASSWORD"],
                                 COD_PERFIL = (string)resultado["COD_PERFIL"],
+                                NombreFull = string.Format("{0} {1}, {2}", (string)resultado["APE_PAT"], (string)resultado["APE_MAT"], (string)resultado["NOMBRE"]),
                             };
                         }
                     }
@@ -94,6 +95,7 @@ namespace SportEl20.ADO
                                 EMAIL = (string)resultado["EMAIL"],
                                 PASSWORD = (string)resultado["PASSWORD"],
                                 COD_PERFIL = (string)resultado["COD_PERFIL"],
+                                NombreFull = string.Format("{0} {1}, {2}", (string)resultado["APE_PAT"], (string)resultado["APE_MAT"], (string)resultado["NOMBRE"]),
                             };
                         }
                     }

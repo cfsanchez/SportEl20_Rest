@@ -3,6 +3,7 @@ using SportEl20.BL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Messaging;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
@@ -24,6 +25,7 @@ namespace RestSportEl20
         {
             int ID_DENUNCIA = 0;
             int.TryParse(id, out ID_DENUNCIA);
+
             return oBL.ObtenerDenuncia(ID_DENUNCIA);
         }
 
@@ -41,12 +43,9 @@ namespace RestSportEl20
 
         public List<DENUNCIA> ListarDenuncia()
         {
+            
             return oBL.ListarDenuncia();
         }
 
-        public void CrearDetalleFoto(List<DETALLE_FOTO> DETALLE_FOTO)
-        {
-            oBL.CrearDetalleFoto(DETALLE_FOTO);
-        }
     }
 }

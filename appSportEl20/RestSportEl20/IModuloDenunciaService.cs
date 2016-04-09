@@ -15,7 +15,6 @@ namespace RestSportEl20
     {
 
         [OperationContract]
-        [WebInvoke(Method = "POST", UriTemplate = "ConsultarDenunciaUsuario", ResponseFormat = WebMessageFormat.Json)]
         List<DENUNCIA> ConsultarDenunciaUsuario(int ID_USUARIO);
 
     }
